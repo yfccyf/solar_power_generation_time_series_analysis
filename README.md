@@ -98,7 +98,7 @@ Then, I selected the optimized VAR order according to AIC, built VAR models for 
 
 ![](images/pred1.png)
 
-* VAR(7) model for freq=3H, RMSE = 18383
+* VAR(7) model for freq=3H, RMSE = 18384
 
 ![](images/pred2.png)
 

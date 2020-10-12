@@ -11,7 +11,7 @@
 **Packages:"" statsmodel, pmdarima, pandas, numpy, matplotlib, seaborn
 
 ## Data Overview
-2 datasets are used: Power generation data, and weather data
+2 datasets are used: Power generation data, and weather data (After cleaning and feature selection)
 * Power Generation Data: 34 days of power generation data recorded in 15-minute interval
 
 ![](images/df2_head.png)
@@ -34,3 +34,40 @@ Weather Data
 * Irradiation
 
 Since our goal is to predict the power generation for the entire power plant, the data from 22 inverters are aggregated. The data size dropped from over 60,000 to 3,000 rows
+
+# EDA
+## Distribution
+Whole timespan: large amount of zero values in DC_POWER and AC_POWER, which is due to long idle hours (night)
+
+![](images/dist.png)
+
+Active hours: dual mode
+
+![](images/dist2.png)
+
+## Correlation
+DC_POWER and AC_POWER are perfectly correlated, thus, we only chose DC_POWER as target
+
+![](images/corr.png)
+
+## Relationships among variables
+### Between DC and Daily Yield
+We can tell that the power conversion rate is around 20%
+
+
+![](images/conversion.png)
+
+### Between Ambient and Module Temperature
+
+During the day, module temp is much higher than ambient temp, but both happen simultaneous and highly correlated. Therefore, I only chose Ambient temp as exogenous predictor
+
+![](images/temp.png)
+
+## Time Series
+Mean generation values on an avergae day
+
+![](images/g1.png)
+
+Mean generation values over the whole period
+
+![](images/g2.png)

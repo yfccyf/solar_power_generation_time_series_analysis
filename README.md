@@ -18,7 +18,7 @@
 
 * Weather Data: 34 days of ambient weather data recorded in 15-minute interval
 
-![](images/df2_2_head.png)
+![](images/df2_2_head_2.png)
 ## Data Preprocessing
 Extracted date and time columns for both datasets. Other than the timestamp, from the datasets, we have the following features:
 

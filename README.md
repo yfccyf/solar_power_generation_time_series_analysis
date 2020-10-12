@@ -83,3 +83,29 @@ Both variables are highly correlated
 ![](images/combined.png)
 
 ## Model Building
+First, I combined the variables from the 2 separate datasets together with selected target and predictor as the same frequency is the same as the original data, 15 minutes
+
+![](images/merged.png)
+
+For prediction purpose, I needed to choose a resampling frequency due to the high original frequency. I decided to test 2 different frequencies (8H and 3H), and compare the evaluation metrics at the end in order to pick a suitable one
+
+Then, augmented Dickey-Fuller test was performed, and it turned out that Ambient temperature data is non-stationary. Consequently, after a first order differencing, both variables have become stationary
+
+The last day data were saved as test set
+
+Then, I selected the optimized VAR order according to AIC, built VAR models for the 2 frequencies respectively, chose Root Mean Square Error as evaluation metric, compared the results and selected frequency = 3H as the final frequency
+* VAR(4) model for freq=8H, RMSE = 51127
+
+![](images/pred1.png)
+
+* VAR(7) model for freq=3H, RMSE = 18383
+
+![](images/pred2.png)
+
+Then, I built a plain AR model with the same order without taking consideration of the exogenous variable, for comparison purpose. VAR model in this case is more accurate than the plain AR.
+
+![](images/pred3.png)
+
+Lastly, the prediction result:
+
+![](images/pred4.png)

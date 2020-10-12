@@ -8,7 +8,7 @@
 ## Code and Resources Used
 **Python Version:** 3.8
 
-**Packages:"" statsmodel, pmdarima, pandas, numpy, matplotlib, seaborn
+**Packages:** statsmodel, pmdarima, pandas, numpy, matplotlib, seaborn
 
 ## Data Overview
 2 datasets are used: Power generation data, and weather data (After cleaning and feature selection)

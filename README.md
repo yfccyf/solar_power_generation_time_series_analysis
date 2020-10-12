@@ -13,11 +13,12 @@
 ## Data Overview
 2 datasets are used: Power generation data, and weather data
 * Power Generation Data: 34 days of power generation data recorded in 15-minute interval
-* Weather Data: 34 days of ambient weather data recorded in 15-minute interval
 
 ![](images/df2_head.png)
 
+* Weather Data: 34 days of ambient weather data recorded in 15-minute interval
 
+![](images/df2_2_head.png)
 ## Data Preprocessing
 Extracted date and time columns for both datasets. Other than the timestamp, from the datasets, we have the following features:
 

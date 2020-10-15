@@ -5,6 +5,8 @@
 * Performed differencing to stabilize the non-stationary time series data
 * Built a VAR model in order to develop multivariate time series analysis
 
+![](images/solar_panel.png)
+
 ## Code and Resources Used
 **Python Version:** 3.8
 
